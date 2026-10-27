@@ -1,0 +1,14 @@
+#headID{
+    color: red;
+}
+
+#parent {
+    display: flex;
+    border: 3px solid gray;
+     align-items: center;
+    justify-content: center;
+}
+
+#child{
+    border: 2px solid red;
+}
