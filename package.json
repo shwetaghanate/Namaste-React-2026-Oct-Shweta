@@ -1,0 +1,31 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "NamasteReact Shweta",
+  "homepage": "https://github.com/shwetaghanate/Namaste-React-2026-Oct-Shweta#readme",
+  "bugs": {
+    "url": "https://github.com/shwetaghanate/Namaste-React-2026-Oct-Shweta/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shwetaghanate/Namaste-React-2026-Oct-Shweta.git"
+  },
+  "license": "ISC",
+  "author": "shwetaghaanate",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "browsersList": [
+    "last 2 versions"
+  ]
+}
