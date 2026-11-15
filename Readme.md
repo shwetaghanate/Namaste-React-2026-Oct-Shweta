@@ -99,3 +99,257 @@ HMR
  - Tree Shaking: remove he unused code for the production builds , Build size is reduced
    Alogorithm: from file, unused improts, exports
    - different bundle for dev and production bundle 
+
+
+   JSX: code(): transpiled before its reaching JSENgine-->Browser
+
+   //Upper case letter for React compoennet is amust
+
+   React 19 new features:
+
+no manual Momoization:  direct optimization in React COmpiler
+React Reconcilation Algorithm : React Fibre:
+no need to use UseMemo, use CallBcak
+<
+> new feature: animation to warp the componenenst as they exnter, exit, move etc
+<Fragmenst> usage
+<we can use(Browser()) function for rendering server side Rendering eg: to get the timeZOne frm local PC
+
+Namste React 2026 : 23rd OCt :2486/- RS
+
+
+<ngb-alert [dismissible]="false" type="info">
+  The UserComponent works!
+</ngb-alert>
+
+<div>
+  <!-- <div>{{ this.data }}</div> -->
+  Search By:
+  <input type="text" value="" placeholder="find" (input)="onSearch($event)" />
+  <table width="50%" height="200px" border="2px solid red">
+    <thead>
+      <tr>
+        <th>Customer Name</th>
+        <th>Account Number</th>
+        <th>Account Status</th>
+        <th>Type</th>
+        <th>Amount</th>
+      </tr>
+    </thead> ? '➖' : '➕'}
+    <tbody>
+      <ng-container>
+        <tr *ngFor="let item of data">
+          <td>{{ item.customerName }}</td>
+          <td>{{ item.accountNumber }}</td>
+          <td>{{ item.status }}</td>
+          <td>{{ item.type }}</td>
+          <td>{{ item.amount }}</td>
+        </tr>
+      </ng-container>
+      <p>{{ searchText }}</p>
+    </tbody>
+  </table>
+</div>
+
+
+PayID: pay_TsWi9jJ86yscSt Namster React 2026 React prenium
+
+
+“Led a team of X engineers delivering [product/module], improving [load time, defect rate, release frequency, or user outcome] by Y.”
+“Introduced shared UI components/design-system patterns adopted by X teams.”
+“Mentored X developers; established review and testing practices that reduced [measured issue].”
+
+>>npx parcel index.html
+>>npm install react
+>>npm i react-dom
+
+
+
+package.json
+"type": "commonjs",
+  // "main": "App.js",
+  "source": "index.html",
+
+
+
+Root cause: import React from "react";
+import { createRoot } from 'react-dom/client';
+//new react 18+ versions
+
+remove main: "App.js" from package.json : to get rid of prod build error
+npx parcel build index.html
+npx parcel index.html
+
+
+>>package.json: 
+"scripts" : {
+'start': 'parcel index.html
+}
+
+git :
+ git push origin main
+
+>>npm run start...
+uninterrupted time for coding, debugging, meetings, reviews and technical decisions.
+
+npm run start=== npm start : calling npx parcel index.html
+
+App.js : file :
+import React from "react";
+import { createRoot } from 'react-dom/client';
+ 
+ 
+// const heading = React.createElement('div', { id: 'parent' },
+//     [React.createElement('div', { id: 'child' },"centered Child",
+//         [React.createElement('h1', {}, "I'm a h1 tag"),
+//         React.createElement('h2', {}, "I'm a h2 tag")]
+//     ),   React.createElement('div', { id: 'child2' },"centered Child",
+//         [React.createElement('h1', {}, "I'm a h1 tag"),
+//         React.createElement('h2', {}, "I'm a h2 tag")]
+//     )]
+// )
+const heading = React.createElement('div', { id: 'parent'}, 'Im h1 tag div')
+console.log(heading)
+
+const root = createRoot(document.getElementById("root"));
+root.render(heading);
+
+
+
+//JSX: JS syntax to create Elemnets: it is not a part of React Lib
+//React apps acan be build without JSX also
+
+//JSX: html like syntax
+
+Babel is a JS compiler  or trabsplier that React will understand..
+JS - babel : JS compiler
+
+
+import React from "react";
+import ReactDOM from 'react-dom/client';
+
+
+// React.createElement ==> Object ==> rendr on DOm ==>HTML ELement
+
+// const Heading = React.createElement("div", 
+//     { id: 'parent' },
+//      "This is heading h1");
+
+const jsxHeading =  (<h1 className="parent">
+    This is JSX : HTML like syntax
+    </h1>)
+
+//  <img src="./images/image1.jpeg" alt="BigCo Inc. logo"/>
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(jsxHeading)
+
+//JSX: JS syntax to create Elemnets: it is not a part of React Lib React apps acan be build without JSX also
+//Babel traspiled JSX to React.createElement 
+//JSX: is not HTML in JS - JSX is HTML like syntax...
+
+react component : 
+Everyting in React is a component
+Searchbar is acompnet
+List of cards its acomponent
+header. Footer its a component
+card, title is acompoent
+list of menu : component: React functions
+
+Class based Components:old way 
+Functional components: New way lastest std React componenst
+
+
+Functinal c: is S fin+ returning JSX (React element
+
+
+const obj = [{
+    key: 'Sample 1',
+    data: 'Data1',
+},
+            {
+    key: 'Sample 3',
+    data: 'Data3',
+},
+            {
+    key: 'Sample 3',
+    data: 'Data3',
+},
+            {
+    key: 'Sample 1',
+    data: 'Data1',
+},
+ {
+    key: 'Sample 2',
+    data: 'Data2',
+}]
+
+function getGroup(obj){
+    let map= new Map();
+    const output = {};
+    for(let i=0; i<obj.length; i++){
+        if(output[obj[i].key]){
+          //key is available
+           output[obj[i].key].push(obj[i])
+        }
+        else{
+            output[obj[i].key] = [obj[i]]
+        }
+    }
+    return output;
+}
+
+///memeoization:
+
+function memoizedOne(fn){
+    function temp(...args){
+        console.log("args", args);
+        const key = args.join("_")
+        if(map.has(key)) {
+            
+            console.log("from cache")
+            return map.get(key)
+        }
+    }
+    temp(fn)
+}
+console.log(memoizedOne(add(2,3)))
+console.log(memoizedOne(add(3,2)))
+console.log(memoizedOne(add(1,10)))
+
+////Flatten an array elemenst:
+
+function flatten(arr){
+    let flat = [];
+    for(let item of arr){
+        if(Array.isArray(item)){
+            flat.push(...flatten(item))
+        }
+        else {
+            flat.push(item)
+        }
+    }
+    return flat;
+        
+}
+let arr =[1,2,[2,3,4,4], [2,3],[[3,5,6,7,8],1] ]
+//very IMP example of recursion ..
+
+*****Compoennt composition: combining 2 compoennst one after the other 
+
+JSX will escape the XSS data sent to browser
+DOM sanitizer: prevention JSX 
+
+amazing functional componenst callinh in App.js
+const HeadingComponent = () =>(
+    <>
+    <Title />
+    {Title()}
+    <Title></Title>
+     {data}
+    <h1>Namaste React Functional Component@@#</h1>
+    </>
+)
+
+JSX makes our web apps more readbale and more fast 
+
